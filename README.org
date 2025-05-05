@@ -18,7 +18,7 @@ global minor mode with =M-x too-wide-minibuffer-mode RET=.
 
 
 #+begin_src emacs-lisp
-(use-package corfu
+(use-package too-wide-minibuffer-mode
   :init
   (too-wide-minibuffer-mode +1)
 
