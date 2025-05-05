@@ -1,0 +1,28 @@
+#+title: too-wide-minibuffer-mode - shrink minibuffer if the frame is too wide
+#+author: Aleksei Gusev
+#+language: en
+
+#+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://img.shields.io/badge/GNU_Emacs-29.1%2B-%237F5AB6?logo=gnuemacs&logoColor=white"/></a>
+
+too-wide-minibuffer-mode adjust minibuffer size and position, so it is displayed under the selected window and occupied half of the frame. It is move convenient to focus if the frame is too wide.
+
+#+html: <img src="https://github.com/hron/too-wide-minibuffer-mode/blob/too-wide-minibuffer-demo.png?raw=true">
+
+* Installation
+
+The package is available from
+[[https://melpa.org/#/too-wide-minibuffer-mode][MELPA]].  After installation, activate the
+global minor mode with =M-x too-wide-minibuffer-mode RET=.
+
+* Configuration
+
+
+#+begin_src emacs-lisp
+(use-package corfu
+  :init
+  (too-wide-minibuffer-mode +1)
+
+  :custom
+  ;; The maximum allowed width for minibuffer window to display as is.
+  (too-wide-minibuffer-max-width 200))
+#+end_src
