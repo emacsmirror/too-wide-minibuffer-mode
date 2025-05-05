@@ -4,7 +4,7 @@
 
 #+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://img.shields.io/badge/GNU_Emacs-29.1%2B-%237F5AB6?logo=gnuemacs&logoColor=white"/></a>
 
-too-wide-minibuffer-mode adjust minibuffer size and position, so it is displayed under the selected window and occupied half of the frame. It is move convenient to focus if the frame is too wide.
+too-wide-minibuffer-mode adjusts minibuffer size and position, so it is displayed under the selected window and occupied half of the frame. It is move convenient to focus if the frame is too wide.
 
 #+html: <img src="https://github.com/hron/too-wide-minibuffer-mode/blob/main/too-wide-minibuffer-demo.png?raw=true">
 
