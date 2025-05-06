@@ -16,6 +16,19 @@
 
 ;;; Code:
 
+(defgroup too-wide-minibuffer-mode nil
+  "Adjust minibuffer size and position if the frame is too wide."
+  :link '(url-link :tag "Website" "https://github.com/hron/too-wide-minibuffer-mode")
+  :link '(emacs-library-link :tag "Library Source" "too-wide-minibuffer-mode.el")
+  :group 'convenience
+  :group 'minibuffer
+  :prefix "too-wide-minibuffer-mode-")
+
+(defcustom too-wide-minibuffer-max-width 160
+  "The maximum allowed width for minibuffer window to display as is."
+  :group 'too-wide-minibuffer-mode
+  :type 'natnum)
+
 (defun too-wide-minibuffer--last-window ()
   "Get the last activated window before active minibuffer."
   (let ((window (minibuffer-selected-window)))
@@ -23,9 +36,6 @@
             window
           (next-window))
         (selected-window))))
-
-(defcustom too-wide-minibuffer-max-width 160
-  "The maximum allowed width for minibuffer window to display as is.")
 
 (defun too-wide-minibuffer--adjust-minibuffer (&optional _)
   "Adjust the size/position of minibuffer window if the frame is too wide."
