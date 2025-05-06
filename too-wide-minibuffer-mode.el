@@ -1,4 +1,4 @@
-;;; too-wide-minibuffer-mode.el --- shrink minibuffer if the frame is too wide  -*- lexical-binding: t; -*-
+;;; too-wide-minibuffer-mode.el --- Shrink minibuffer if the frame is too wide  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025  Aleksei Gusev
 
@@ -16,17 +16,17 @@
 
 ;;; Code:
 
-(defgroup too-wide-minibuffer-mode nil
+(defgroup too-wide-minibuffer nil
   "Adjust minibuffer size and position if the frame is too wide."
   :link '(url-link :tag "Website" "https://github.com/hron/too-wide-minibuffer-mode")
   :link '(emacs-library-link :tag "Library Source" "too-wide-minibuffer-mode.el")
   :group 'convenience
   :group 'minibuffer
-  :prefix "too-wide-minibuffer-mode-")
+  :prefix "too-wide-minibuffer-")
 
 (defcustom too-wide-minibuffer-max-width 160
   "The maximum allowed width for minibuffer window to display as is."
-  :group 'too-wide-minibuffer-mode
+  :group 'too-wide-minibuffer
   :type 'natnum)
 
 (defun too-wide-minibuffer--last-window ()
@@ -52,6 +52,7 @@
         (set-window-margins minibuffer-win half-frame 0)
       (set-window-margins minibuffer-win 0 0))))
 
+;;;###autoload
 (define-minor-mode too-wide-minibuffer-mode
   "Adjust minibuffer position/size if the frame is too wide."
   :global t
