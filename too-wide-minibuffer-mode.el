@@ -3,6 +3,10 @@
 ;; Copyright (C) 2025  Aleksei Gusev
 
 ;; Author: Aleksei Gusev <aleksei.gusev@gmail.com>
+;; Created: 2025
+;; Version: 1.0
+;; Package-Requires: ((emacs "30.1"))
+;; URL: https://github.com/hron/too-wide-minibuffer-mode
 ;; Keywords: convenience
 
 ;;; Commentary:
