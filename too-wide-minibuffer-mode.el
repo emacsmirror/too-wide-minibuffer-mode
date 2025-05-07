@@ -58,8 +58,12 @@
   :global t
   (let ((trigger-hooks '(window-state-change-hook minibuffer-setup-hook)))
     (if too-wide-minibuffer-mode
-        (dolist (hook trigger-hooks)
-          (add-hook hook #'too-wide-minibuffer--adjust-minibuffer))
+        (progn
+          (when minibuffer-follows-selected-frame
+            (warn "too-wide-minibuffer-mode is not compatible with `minibuffer-follows-selected-frame', setting it to nil")
+            (setq minibuffer-follows-selected-frame nil))
+          (dolist (hook trigger-hooks)
+            (add-hook hook #'too-wide-minibuffer--adjust-minibuffer)))
       (dolist (hook trigger-hooks)
         (remove-hook hook #'too-wide-minibuffer--adjust-minibuffer)))))
 

@@ -24,5 +24,13 @@ global minor mode with =M-x too-wide-minibuffer-mode RET=.
 
   :custom
   ;; The maximum allowed width for minibuffer window to display as is.
-  (too-wide-minibuffer-max-width 200))
+  (too-wide-minibuffer-max-width 200)
+  ;; The mode is not compatible with `minibuffer-follows-selected-frame` set to `t`
+  (minibuffer-follows-selected-frame nil))
 #+end_src
+
+* Compatibility
+
+This mode doesn't work properly if `minibuffer-follows-selected-frame` is set to
+`t` and there are more than single frame. Please disable this setting in you
+configuration to avoid a warning message.
