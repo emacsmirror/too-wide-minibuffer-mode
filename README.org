@@ -32,5 +32,5 @@ global minor mode with =M-x too-wide-minibuffer-mode RET=.
 * Compatibility
 
 This mode doesn't work properly if `minibuffer-follows-selected-frame` is set to
-`t` and there are more than single frame. Please disable this setting in you
+`t` and there are more than one frame. Please disable this setting in your
 configuration to avoid a warning message.
