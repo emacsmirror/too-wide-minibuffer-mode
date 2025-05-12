@@ -33,6 +33,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defgroup too-wide-minibuffer nil
   "Adjust minibuffer size and position if the frame is too wide."
   :link '(url-link :tag "Website" "https://github.com/hron/too-wide-minibuffer-mode")
