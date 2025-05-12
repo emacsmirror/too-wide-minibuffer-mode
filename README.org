@@ -34,3 +34,12 @@ global minor mode with =M-x too-wide-minibuffer-mode RET=.
 This mode doesn't work properly if `minibuffer-follows-selected-frame` is set to
 `t` and there are more than one frame. Please disable this setting in your
 configuration to avoid a warning message.
+
+* Alternatives
+
+Apparently, this problem was solved one way or another many times in Emacs community. Here are the list of alternatives with a few words about the differences:
+
+- [[https://github.com/tumashu/vertico-posframe][vertico-posframe]] works great, but only if you use vertico package and only to show completion candidates. It means it doesn't control where Emacs shows `I-search:` prompt for example
+- [[https://github.com/muffinmad/emacs-mini-frame?tab=readme-ov-file][emacs-mini-frame]] again, doesn't control the echo area, also moves the minibuffer to a separate frame which creates problems with window managements
+- [[https://github.com/honmaple/emacs-maple-minibuffer/][emacs-maple-minibuffer]] wraps around Emacs any command and should work with `isearch-forward` and `query-replace`, but in practice these commands don't always use standard minibuffer interactions and at least for me neither isearch nor query-replace work reliably
+- [[https://github.com/tumashu/ivy-posframe][ivy-posframe]] the same as vertico-posframe, great for completion candidates when you use `ivy`, but doesn't affect isearch, echo area messages and etc
